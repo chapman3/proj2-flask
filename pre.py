@@ -76,7 +76,7 @@ def process(raw):
             #else:
                 #entry['currentWeek'] = False
             print(content.format())
-            entry['current_week'] ="test"
+            entry['current_week'] = False
             entry['date'] = "test"
             entry['topic'] = ""
             entry['project'] = ""
