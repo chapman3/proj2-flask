@@ -13,7 +13,7 @@ github:
 
 in ix:
 
-    ix.cs.uoregon.edu/chapman3/public_html/htbin/cis399/proj2-flask/
+    /chapman3/public_html/cis399/htbin/proj2-flask/
 
 browser link when running:
 
