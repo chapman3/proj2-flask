@@ -10,6 +10,7 @@ base = arrow.now()
 def calcWeek():
     return time.strftime("%d/%m/%Y")
 
+
 def weekComp(week):
     if week == 1:
         return "01/04/2016"
@@ -68,12 +69,13 @@ def process(raw):
             if entry:
                 cooked.append(entry)
                 entry = { }
-            tempWeek = content.strip(" ")
-            entry['date'] = weekComp(tempWeek)
-            if currentDate >= entry['date'] and currentDate < weekComp(tempWeek+1):
-                entry['currentWeek'] = True
-            else:
-                entry['currentWeek'] = False
+            #tempWeek = content.strip(" ")
+            #entry['date'] = weekComp(tempWeek)
+            #if currentDate >= entry['date'] and currentDate < weekComp(tempWeek+1):
+                #entry['currentWeek'] = True
+            #else:
+                #entry['currentWeek'] = False
+            print(base)
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
