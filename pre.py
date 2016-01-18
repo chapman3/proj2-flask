@@ -75,7 +75,7 @@ def process(raw):
                 #entry['currentWeek'] = True
             #else:
                 #entry['currentWeek'] = False
-            #print(base)
+            print(content.format())
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
