@@ -71,11 +71,12 @@ def process(raw):
                 entry = { }
             tempWeek = int(content.format())
             entry['date'] = week_comp(tempWeek)
-            if current_date >= entry['date'] and current_date < week_comp(tempWeek+1):
-                entry['current_week'] = True
-            else:
-                entry['current_week'] = False
+            #if current_date >= entry['date'] and current_date < week_comp(tempWeek+1):
+                #entry['current_week'] = True
+            #else:
+                #entry['current_week'] = False
             #print(content.format())
+            entry['current_week'] = False
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
