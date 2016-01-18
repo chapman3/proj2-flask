@@ -69,15 +69,14 @@ def process(raw):
             if entry:
                 cooked.append(entry)
                 entry = { }
-            #tempWeek = content.strip(" ")
-            #entry['date'] = weekComp(tempWeek)
+            tempWeek = str(content.format())
+            entry['date'] = weekComp(tempWeek)
             #if currentDate >= entry['date'] and currentDate < weekComp(tempWeek+1):
                 #entry['currentWeek'] = True
             #else:
                 #entry['currentWeek'] = False
             print(content.format())
             entry['current_week'] = False
-            entry['date'] = "test"
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
