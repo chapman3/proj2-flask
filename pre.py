@@ -40,7 +40,7 @@ def process(raw):
     processing is preceded by 'head: ' for some string 'head'.  Lines
     may be continued if they don't contain ':'.  
     """
-    currentDate = calcWeek()
+    #currentDate = calcWeek()
     field = None
     entry = { }
     cooked = [ ] 
