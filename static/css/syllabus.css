@@ -30,7 +30,7 @@ tr.even {
     background-color: rgb(224,213,179);
 }
 
-.class-schedule .current-date {
+.class-schedule .current_week {
     text-color: (200,0,0)
 }
 
