@@ -2,13 +2,13 @@
 Test program for pre-processing schedule
 """
 import arrow
-#import time
+import time
 
 base = arrow.now()
 
 
-#def calcWeek():
-    #return time.strftime("%d/%m/%Y")
+def calc_week():
+    return time.strftime("%d/%m/%Y")
 
 
 def week_comp(week):
@@ -40,7 +40,7 @@ def process(raw):
     processing is preceded by 'head: ' for some string 'head'.  Lines
     may be continued if they don't contain ':'.  
     """
-    #currentDate = calcWeek()
+    current_date = calc_week()
     field = None
     entry = { }
     cooked = [ ] 
@@ -71,12 +71,11 @@ def process(raw):
                 entry = { }
             tempWeek = int(content.format())
             entry['date'] = week_comp(tempWeek)
-            #if currentDate >= entry['date'] and currentDate < weekComp(tempWeek+1):
-                #entry['currentWeek'] = True
-            #else:
-                #entry['currentWeek'] = False
-            print(content.format())
-            entry['current_week'] = False
+            if current_date >= entry['date'] and current_date < week_comp(tempWeek+1):
+                entry['currentWeek'] = True
+            else:
+                entry['currentWeek'] = False
+            #print(content.format())
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
