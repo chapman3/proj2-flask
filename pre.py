@@ -1,5 +1,6 @@
 """
 Test program for pre-processing schedule
+Currently only works with hardcoded dates within week_comp function
 """
 import arrow
 import time
@@ -8,10 +9,14 @@ base = arrow.now()
 
 
 def calc_week():
+    #args: none
+    #returns: time object
     return time.strftime("%m/%d/%Y")
 
 
 def week_comp(week):
+    #args: int
+    #returns: str
     if week == 1:
         return "01/04/2016"
     elif week == 2:
@@ -40,8 +45,8 @@ def process(raw):
     processing is preceded by 'head: ' for some string 'head'.  Lines
     may be continued if they don't contain ':'.  
     """
-    current_date = str(calc_week())
-    #print(current_date)
+    current_date = str(calc_week()) #cast time obj to str
+    #print(current_date) #testing
     field = None
     entry = { }
     cooked = [ ] 
@@ -72,12 +77,12 @@ def process(raw):
                 entry = { }
             temp_week = int(content.format())
             entry['date'] = week_comp(temp_week)
-            if current_date >= entry['date'] and current_date < week_comp(temp_week+1):
+            if current_date >= entry['date'] and current_date < week_comp(temp_week+1): #test if it's current week
                 entry['current_week'] = True
             else:
                 entry['current_week'] = False
-            #print(content.format())
-            #entry['current_week'] = True
+            #print(content.format()) #testing
+            #entry['current_week'] = True #testing
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
