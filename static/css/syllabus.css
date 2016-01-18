@@ -30,8 +30,15 @@ tr.even {
     background-color: rgb(224,213,179);
 }
 
+.class-schedule .current-date {
+    text-color: (200,0,0)
+}
+
+.class-schedule .date {
+
+}
+
 .class-schedule .week {
-    
     font-weight: bolder;
     font-size: 150%; 
     text-align: center; 

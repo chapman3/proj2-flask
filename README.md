@@ -5,6 +5,21 @@ Remember to remove these instructions and replace them with the
 material described at 
    https://www.cs.uoregon.edu/Classes/16W/cis399se/turnin.php
 
+## Replace All But:
+David Chapman
+CIS 399se
+
+
+    To-Do:
+        * Add URL to README file
+        * Add beginning date of each weekly entry
+        * Highlight the current week
+
+    references:
+        python date import and usage: http://www.cyberciti.biz/faq/howto-get-current-date-time-in-python/
+
+
+
 ## Basic task
 
 * Fork on github (or bitbucket)
@@ -55,7 +70,9 @@ or cis322 subdirectory.  I've optimistically called mine cis322:
 
 `   cd public_html;  mkdir cis322`
 
-Public_html is for serving web pages from your personal account.  We're going to be using the department's Apache web server to run our application as a 'cgi-bin' subprocess.  To do that, we'll need to keep our application in a subdirectory called 'htbin'.  
+Public_html is for serving web pages from your personal account.  We're going to be using the department's Apache web
+server to run our application as a 'cgi-bin' subprocess.
+To do that, we'll need to keep our application in a subdirectory called 'htbin'.
 
 `   cd cis322;  mkdir htbin`
 
@@ -76,7 +93,10 @@ type `make install`
 version on ix, so this should work.   (You'll learn much more about writing and 
 using Makefiles in CIS 330.) 
 
-What's really different is that we won't be running syllabus.py directly from the command line.  Instead, it is loaded as a Python module by a tiny Python program called app.cgi.  The 'cgi' suffix tells our web server to run the script, so we can reach it through the url `http://ix.cs.uoregon.edu/~michal/cis322/htbin/proj2-flask/app.cgi/`.  
+What's really different is that we won't be running syllabus.py directly from the command line.
+Instead, it is loaded as a Python module by a tiny Python program called app.cgi.
+The 'cgi' suffix tells our web server to run the script, so we can reach it through the url
+`http://ix.cs.uoregon.edu/~michal/cis322/htbin/proj2-flask/app.cgi/`.
 
 The URLs are long and ugly, but it will do for testing. 
 
