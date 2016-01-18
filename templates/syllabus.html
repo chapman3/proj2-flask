@@ -13,9 +13,6 @@
 
 <table class="class-schedule">
   {% for entry in session.schedule %}
-  {% if entry.currentWeek is true %}
-    <tr class ="current-date">
-  {% endif %}
   {% if loop.index is divisibleby 2 %}
     <tr class="even">
   {% else %}
