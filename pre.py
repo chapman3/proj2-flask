@@ -40,7 +40,7 @@ def process(raw):
     processing is preceded by 'head: ' for some string 'head'.  Lines
     may be continued if they don't contain ':'.  
     """
-    current_date = calc_week()
+    current_date = str(calc_week())
     print(current_date)
     field = None
     entry = { }
