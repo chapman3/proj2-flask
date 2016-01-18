@@ -41,7 +41,7 @@ def process(raw):
     may be continued if they don't contain ':'.  
     """
     current_date = str(calc_week())
-    print(current_date)
+    #print(current_date)
     field = None
     entry = { }
     cooked = [ ] 
