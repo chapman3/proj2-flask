@@ -8,7 +8,7 @@ base = arrow.now()
 
 
 def calc_week():
-    return time.strftime("%d/%m/%Y")
+    return time.strftime("%m/%d/%Y")
 
 
 def week_comp(week):
