@@ -2,13 +2,13 @@
 Test program for pre-processing schedule
 """
 import arrow
-import time
+#import time
 
 base = arrow.now()
 
 
-def calcWeek():
-    return time.strftime("%d/%m/%Y")
+#def calcWeek():
+    #return time.strftime("%d/%m/%Y")
 
 
 def weekComp(week):
@@ -75,7 +75,7 @@ def process(raw):
                 #entry['currentWeek'] = True
             #else:
                 #entry['currentWeek'] = False
-            print(base)
+            #print(base)
             entry['topic'] = ""
             entry['project'] = ""
             entry['week'] = content
