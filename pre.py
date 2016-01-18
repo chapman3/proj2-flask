@@ -11,7 +11,7 @@ base = arrow.now()
     #return time.strftime("%d/%m/%Y")
 
 
-def weekComp(week):
+def week_comp(week):
     if week == 1:
         return "01/04/2016"
     elif week == 2:
@@ -70,7 +70,7 @@ def process(raw):
                 cooked.append(entry)
                 entry = { }
             tempWeek = str(content.format())
-            entry['date'] = weekComp(tempWeek)
+            entry['date'] = week_comp(tempWeek)
             #if currentDate >= entry['date'] and currentDate < weekComp(tempWeek+1):
                 #entry['currentWeek'] = True
             #else:
